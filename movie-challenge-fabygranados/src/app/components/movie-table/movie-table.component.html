@@ -1,0 +1,34 @@
+<p> The most popular TV Shows in Korea</p>
+<mat-paginator 
+[length]="totalPages" 
+[pageSize]="pageSize" 
+[pageIndex]="currentPage - 1" 
+(page)="onPageChange($event)">
+  </mat-paginator>
+<table class="table table-danger table-hover table-borderless">
+	<thead>
+		<tr>
+			<th scope="col">Movie/Details</th>
+			<th scope="col">Poster</th>
+			<th scope="col">Popularity</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let movie of movies">
+			<td>
+        {{ movie.name }} 
+		<br><strong>Origin</strong>
+		{{movie.origin_country}}
+		<br><strong>Air Date</strong>
+		{{movie.first_air_date}}
+			</td>
+			<td>
+      <img
+        [src]="'https://image.tmdb.org/t/p/w92/' + movie.poster_path"
+        class="me-auto"
+      />
+    </td>
+			<td>{{ movie.vote_average | number }}</td>
+		</tr>
+	</tbody>
+</table>

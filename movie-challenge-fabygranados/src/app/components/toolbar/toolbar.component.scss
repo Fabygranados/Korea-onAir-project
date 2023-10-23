@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackside+One&display=swap');
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.title{
+  margin-bottom: 1rem;
+}
+
+.mat-toolbar{ 
+    background: #A7C3C1;
+    color: #ca7b98;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-shadow: 1px 1.5px 1.5px rgba(119, 136, 153, 0.742);
+    font-family: 'Slackside One';
+    box-shadow: 2px 3px 3px rgba(128, 128, 128, 0.916);
+}
